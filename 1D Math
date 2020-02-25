@@ -15,15 +15,30 @@
  {
  for(j=i+1;j<arr_size;j++)
  {
- if(bubble[i] > bubble[j])
+ if(int_arr[i] > int_arr[j])
  {
- temp=bubble[i];
- bubble[i] = bubble[j];
- bubble[j] = temp;
+ temp=int_arr[i];
+ int_arr[i] = int_arr[j];
+ int_arr[j] = temp;
  }
  }
  }
  
  6. Display the contents of array using for loop
   for(i=0;i<arr_size;i++)
-    printf("%d",bubble[i]);
+    printf("%d",int_arr[i]);
+
+7. Calculate average of the array.
+int sum = 0; 
+for (int i=0; i<arr_size; i++) 
+   sum += int_arr[i]; 
+print(sum/int_arr)
+
+8. Calculate Median of the array.
+Median of a sorted array of size n is defined as the middle element when n is odd and average of middle two elements when n is even.
+
+if (arr_size % 2 != 0) #check for odd number
+    print int_arr[arr_size+1/2]; 
+else
+    print (double)(a[(n-1)/2] + a[n/2])/2.0
+       
