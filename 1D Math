@@ -39,6 +39,6 @@ Median of a sorted array of size n is defined as the middle element when n is od
 
 if (arr_size % 2 != 0) #check for odd number
     print int_arr[arr_size+1/2]; 
-else
-    print (double)(a[(n-1)/2] + a[n/2])/2.0
+else #even number
+    print (int_arr[arr_size/2]+a[(arr_size+2)/2] )/2
        
