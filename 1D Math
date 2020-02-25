@@ -1,0 +1,29 @@
+1. arr_size <--- input from user
+
+2. Create an integer array int_arr based on that size
+
+3. min_value <--- input from user
+   max_value <--- input from user
+
+4. Use range_range() method that we created in the previous assignment to generate random numbers between min_value and max_value
+   Fill the array with the random numbers
+
+5. Use Bubble sort to sort the array
+
+/* Bubble sort */
+ for(i=0;i<arr_size-1;i++)
+ {
+ for(j=i+1;j<arr_size;j++)
+ {
+ if(bubble[i] > bubble[j])
+ {
+ temp=bubble[i];
+ bubble[i] = bubble[j];
+ bubble[j] = temp;
+ }
+ }
+ }
+ 
+ 6. Display the contents of array using for loop
+  for(i=0;i<arr_size;i++)
+    printf("%d",bubble[i]);
