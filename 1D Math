@@ -43,18 +43,37 @@ else #even number
     print (int_arr[arr_size/2]+a[(arr_size+2)/2] )/2
        
 9. Number of unique elements in the array.
+First srt the array in the above step and then use the logic below.
+#include<stdio.h> 
+int main() 
+{
+int counter = 1;
+for(i = 1; i < arr_size; i++) {
+    if (int_arr[i] != int_arr[i-1]){
+        //printf("%d -- %d",int_arr[i], int_arr[i-1]);
+        //printf("\n");
+        counter++;
+        }
+    }  
+printf("%d",counter);
+ return 0;
+}
+
+10. Number of duplicated elements
+add a while loop to the above problem to skip numbers repeated more than twice
 #include<stdio.h> 
 int main() 
 {
 int size, i, j,c=0;
-size = 6;
-int array[] = { 2,2, 10, 10,12, 45 }; 
-int counter = 1;
+size = 8;
+int array[] = {2,2, 10,10,10,12, 45,45 }; 
+int counter = 0;
 for(i = 1; i < size; i++) {
-    if (array[i] != array[i-1]){
-        //printf("%d -- %d",array[i], array[i-1]);
-        //printf("\n");
+    if (array[i] == array[i-1]){
+        printf("%d -- %d",array[i], array[i-1]);
+        printf("\n");
         counter++;
+        while(array[i]==array[i-1]) i++;
         }
     }  
 printf("%d",counter);
