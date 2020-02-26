@@ -42,3 +42,29 @@ if (arr_size % 2 != 0) #check for odd number
 else #even number
     print (int_arr[arr_size/2]+a[(arr_size+2)/2] )/2
        
+9. Number of unique elements in the array.
+#include<stdio.h> 
+int main() 
+{
+int size, i, j,c=0;
+size = 5;
+int array[] = { 12, 2, 10, 10, 45 }; 
+
+for(i = 0; i < size; i++) 
+    {
+    for (j=0; j<i; j++)
+        {
+        if (array[i] == array[j])
+        break;
+        }  
+    if (i == j)
+        {
+/* No duplicate element found between index 0 to i */
+        printf("%d -- %d",i,j);
+        printf("\n");
+        c++;
+        }
+    }  
+printf("%d",c);
+ return 0;
+}
