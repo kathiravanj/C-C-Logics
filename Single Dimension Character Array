@@ -21,9 +21,24 @@ int getFrequencyOf(char letters*, int size, char item){
   int frequency = 0;
   for(i=0;i<size;i++){
     if letters[i] == item{
-      frequency++
+      frequency++;
     }
   }
   return frequency;
 }
 
+4. Remove all instances of a specific character from array
+void removeCharacter(char letters*, int size, char item){
+for(i=0;i<size;i++){
+    if letters[i] == item{
+        for(j=i; j<size; j++){
+            letters[j] = letters[j+1];
+            }
+      }
+    }
+}
+
+5. sort array alphabetically
+void sortArray(char letters*, int size){
+
+}
