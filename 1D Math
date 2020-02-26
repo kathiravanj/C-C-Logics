@@ -47,24 +47,16 @@ else #even number
 int main() 
 {
 int size, i, j,c=0;
-size = 5;
-int array[] = { 12, 2, 10, 10, 45 }; 
-
-for(i = 0; i < size; i++) 
-    {
-    for (j=0; j<i; j++)
-        {
-        if (array[i] == array[j])
-        break;
-        }  
-    if (i == j)
-        {
-/* No duplicate element found between index 0 to i */
-        printf("%d -- %d",i,j);
-        printf("\n");
-        c++;
+size = 6;
+int array[] = { 2,2, 10, 10,12, 45 }; 
+int counter = 1;
+for(i = 1; i < size; i++) {
+    if (array[i] != array[i-1]){
+        //printf("%d -- %d",array[i], array[i-1]);
+        //printf("\n");
+        counter++;
         }
     }  
-printf("%d",c);
+printf("%d",counter);
  return 0;
 }
