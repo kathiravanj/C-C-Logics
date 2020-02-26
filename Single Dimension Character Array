@@ -38,7 +38,8 @@ for(i=0;i<size;i++){
     }
 }
 
-5. sort array alphabetically
+5. sort array alphabetically - bubble sort works too.
+Lets try Merge or shell or quick sort
 void sortArray(char letters*, int size){
 
 }
