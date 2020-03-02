@@ -154,3 +154,53 @@ P           j  i
 
 //call quicksort for j+1 to high
 50 60 80 100
+
+Use the same program to sort char array
+
+#include <stdio.h>
+
+void quicksort(char list[], int low, int high)
+{
+    int pivot, i, j, temp;
+    if (low < high) // run only for more than one element in array
+    {
+        pivot = low; // set pivot as first element
+        i = low; // set low index as first element
+        j = high; // set high index as last element
+        while (i < j) // we dont want low and high index to meet
+        {
+            while (list[i] <= list[pivot] && i <= high)
+            {
+                i++; // move low index till you find a number greater than pivot element
+            }
+            while (list[j] > list[pivot] && j >= low)
+            {
+                j--; // Move high index back till you find a number less than pivot element
+            }
+            if (i < j) // if low index pointing big number and high index pointing small number then swap
+            {
+                temp = list[i];
+                list[i] = list[j];
+                list[j] = temp;
+            }
+        } // continue until i < j
+        temp = list[j]; // number on high index and number on pivot
+        list[j] = list[pivot];
+        list[pivot] = temp;
+        quicksort(list, low, j - 1);
+        quicksort(list, j + 1, high);
+    }
+}
+
+int main()
+{
+    char a[] = {'p', 'f', 'i', 'l', 'e', 's', 'u', 'v', 'z'};
+    int i;
+    int asize = 9;
+    quicksort(a,0,asize-1);
+    for (i=0; i<asize; i++){
+        printf("%c",a[i]);
+        printf("\n");
+    }
+    return 0;
+}
