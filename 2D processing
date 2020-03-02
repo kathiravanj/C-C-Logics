@@ -1,1 +1,26 @@
 
+#include<stdio.h>
+int main()
+{
+     int i,j,n,s;
+
+     printf("How many strings you want to enter: ");
+     scanf("%d",&n);
+
+     printf("what is the maximun size of the strings: ");
+     scanf("%d",&s);
+     
+     char name[n][s];
+     
+     //reading string from user
+     for(i=0;i<n;i++){
+         printf("Enter string %d : ", i+1);
+        scanf("%s[^\n]",name[i]);
+        }
+     //Dispaying names
+     printf("\nEntered names are:\n");
+     for(i=0;i<n;i++)
+     puts(name[i]);
+
+     return 0;
+}
